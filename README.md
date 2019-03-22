@@ -1,7 +1,7 @@
 Audio Sample Splitter
 ===
 
-The audio sample splitter takes in audio data and exports .wav files of singular instances of a musical instrument, such as a single note on a piano or a single hit of a snare drum. The seperated audio files can then be assigned to midi instruments. Live instruments are often recorded in one long .wav file where, for example, each drum in a set would be played by itself and allowed to ring out before the next is played. Typically an audio engineer would use a DAW to manually go through the .wav file (which is sometimes an hour or more) to split and export each sample manually.
+The [audio sample splitter](https://jonathansolheim.github.io/Audio_Sample_Splitter/) takes in audio data and exports .wav files of singular instances of a musical instrument, such as a single note on a piano or a single hit of a snare drum. The seperated audio files can then be assigned to midi instruments. Live instruments are often recorded in one long .wav file where, for example, each drum in a set would be played by itself and allowed to ring out before the next is played. Typically an audio engineer would use a DAW to manually go through the .wav file (which is sometimes an hour or more) to split and export each sample manually.
 
 The audio sample splitter operates in two distinct modes; live and non-live. In non-live mode the user simply inputs the .wav file upon instantiation, splits it and exports all or some of the samples. In live mode, The sample splitter operates in conjunction with [Elma](http://klavinslab.org/elma) to export samples as the audio data is being fed in.
 
@@ -11,7 +11,6 @@ Installation
 ---
 
     git clone https://github.com/jonathansolheim/Audio_Sample_Splitter.git
-    cd elma_project
     docker run -v $PWD:/source -it cppenv-http bash
     make
     make docs
